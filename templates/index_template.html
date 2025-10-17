@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang=en>
+  <head>
+    <meta charset=UTF-8 />
+    <meta name=viewport content=width=device-width, initial-scale=1 />
+    <title>{{TITLE}}</title>
+    <style>
+      :root { --bg: #0b132b; --panel: #1c2541; --accent: #5bc0be; --muted: #cbd5e1; --text: #e2e8f0; }
+      * { box-sizing: border-box; }
+      body { margin: 0; font-family: -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); }
+      header { padding: 20px 24px; background: linear-gradient(90deg, #1c2541, #3a506b); border-bottom: 1px solid #2b3a67; }
+      h1 { margin: 0; font-weight: 700; letter-spacing: .3px; }
+      main { max-width: 980px; margin: 24px auto; padding: 0 16px; }
+      .card { background: var(--panel); border: 1px solid #2b3a67; border-radius: 10px; padding: 16px; box-shadow: 0 6px 24px rgba(0,0,0,.25); }
+      ul { list-style: none; padding: 0; margin: 0; }
+      li { margin: 10px 0; }
+      a { color: var(--accent); text-decoration: none; }
+      a:hover { text-decoration: underline; }
+      .muted { color: var(--muted); font-size: 14px; }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>{{HEADING}}</h1>
+      <div class=muted>Latest generated dashboards</div>
+    </header>
+    <main>
+      <div class=card>
+        <ul>
+          {{LIST_ITEMS}}
+        </ul>
+      </div>
+    </main>
+  </body>
+</html>
