@@ -1,0 +1,227 @@
+<html><head><meta charset="utf-8"><title>Penola R7</title>
+
+<style>
+  :root { --bg:#0f172a; --panel:#111827; --accent:#06b6d4; --accent2:#f59e0b; --accent3:#ef4444; --text:#e5e7eb; --muted:#9ca3af; }
+  body { background: linear-gradient(135deg, #0f172a 0%, #1f2937 100%); color: var(--text); font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif; margin:0; }
+  .container { max-width:1200px; margin:24px auto; padding:24px; background: rgba(17,24,39,0.9); border-radius:16px; box-shadow:0 10px 30px rgba(0,0,0,0.4); }
+  h1 { margin:0 0 4px 0; font-size:32px; letter-spacing:0.3px; }
+  h3 { margin:16px 0; color: var(--muted); font-weight:600; }
+  .badge { display:inline-block; padding:6px 10px; background: linear-gradient(90deg, var(--accent), var(--accent2)); color:#0b1324; border-radius: 999px; font-weight:700; font-size:12px; margin-left:8px; }
+  .race-header { margin: 8px 0 16px 0; padding: 10px 12px; background: linear-gradient(90deg, rgba(6,182,212,0.18), rgba(245,158,11,0.18)); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; }
+  .summary-card { background: radial-gradient(1200px 400px at 0% 0%, rgba(6,182,212,0.12), transparent 50%), radial-gradient(1200px 400px at 100% 0%, rgba(245,158,11,0.12), transparent 50%), rgba(17,24,39,0.7); border: 1px solid rgba(255,255,255,0.08); border-radius:14px; padding:16px; }
+  table { width:100%; border-collapse: collapse; overflow:hidden; border-radius:12px; }
+  thead { background: linear-gradient(90deg, rgba(6,182,212,0.25), rgba(239,68,68,0.25)); }
+  th, td { padding:10px 12px; text-align:left; }
+  th { font-size:13px; text-transform: uppercase; letter-spacing:0.6px; color:#eaf1ff; }
+  tbody tr { background: rgba(255,255,255,0.03); border-bottom: 1px solid rgba(255,255,255,0.06); }
+  tbody tr:nth-child(even) { background: rgba(255,255,255,0.06); }
+  tbody tr:hover { background: rgba(6,182,212,0.12); }
+  .footer-note { color: var(--muted); margin-top: 10px; font-size: 12px; }
+  .plots { margin-top:18px; padding:16px; background: rgba(17,24,39,0.65); border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; }
+  .grid { display:grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 12px; }
+  .card { background: rgba(17,24,39,0.7); border:1px solid rgba(255,255,255,0.08); border-radius:12px; padding:12px; }
+  a { color:#7dd3fc; text-decoration:none; }
+  a:hover { text-decoration:underline; }
+</style>
+
+</head><body>
+<div class="container">
+<h1>Penola R7 <span class="badge">Predictive Dashboard</span></h1>
+<div class="race-header">Distance: 1400m  |  Grade: 4U BM68  |  Track: Soft</div>
+<h3>Runner Summary</h3>
+<div class="summary-card">
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>tab_number</th>
+      <th>name</th>
+      <th>barrier</th>
+      <th>weight_carriered</th>
+      <th>average_price</th>
+      <th>win_prob</th>
+      <th>average_early_speed</th>
+      <th>average_finishing_speed</th>
+      <th>total_rating_100</th>
+      <th>jockey</th>
+      <th>trainer</th>
+      <th>form_l5</th>
+      <th>runner_comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Hasta La Fiorente</td>
+      <td>10</td>
+      <td>62.5</td>
+      <td>35.0</td>
+      <td>2.3</td>
+      <td>16.0</td>
+      <td>17.0</td>
+      <td>39.6</td>
+      <td>Caitlin Jones</td>
+      <td>Sue Murphy</td>
+      <td>0866x</td>
+      <td>Hasta La Fiorente: last run 210 days ago, at MT G7, stepping up by 650m</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Cawdor</td>
+      <td>5</td>
+      <td>60.5</td>
+      <td>5.0</td>
+      <td>16.2</td>
+      <td>15.7</td>
+      <td>16.9</td>
+      <td>54.8</td>
+      <td>Tom Madden</td>
+      <td>Shane Jackson</td>
+      <td>5980x</td>
+      <td>Cawdor: last run 79 days ago, at SANH8, stepping up by 400m</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Crown Mint</td>
+      <td>1</td>
+      <td>60.5</td>
+      <td>13.0</td>
+      <td>6.2</td>
+      <td>15.0</td>
+      <td>18.0</td>
+      <td>46.7</td>
+      <td>Alana Livesey</td>
+      <td>G Richards &amp; D Moyle</td>
+      <td>x031x</td>
+      <td>Crown Mint: last run 146 days ago, at MBRG8, stepping up by 400m</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Fox Gem</td>
+      <td>13</td>
+      <td>57.5</td>
+      <td>10.2</td>
+      <td>7.9</td>
+      <td>15.2</td>
+      <td>17.0</td>
+      <td>37.8</td>
+      <td>Brooke King</td>
+      <td>John Macmillan</td>
+      <td>6350x</td>
+      <td>Fox Gem: last run 167 days ago, at MORP6, stepping up by 1100m</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>Jilladora</td>
+      <td>14</td>
+      <td>57.5</td>
+      <td>3.4</td>
+      <td>23.8</td>
+      <td>16.2</td>
+      <td>17.3</td>
+      <td>57.1</td>
+      <td>Alysha Warren</td>
+      <td>Justin Pickering</td>
+      <td>5x356</td>
+      <td>Jilladora: last run 20 days ago, at MPK9</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>West Cliff</td>
+      <td>3</td>
+      <td>57.0</td>
+      <td>10.2</td>
+      <td>7.9</td>
+      <td>16.2</td>
+      <td>17.5</td>
+      <td>37.6</td>
+      <td>Polly Brewster</td>
+      <td>Jamie Opperman</td>
+      <td>5110x</td>
+      <td>West Cliff: last run 167 days ago, at MORP4, stepping up by 200m</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>Greenidge</td>
+      <td>8</td>
+      <td>57.5</td>
+      <td>6.5</td>
+      <td>12.4</td>
+      <td>17.1</td>
+      <td>16.8</td>
+      <td>48.3</td>
+      <td>Kayla Crowther</td>
+      <td>Stephen Theodore</td>
+      <td>16x10</td>
+      <td>Greenidge: last run 20 days ago, at MPK9</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>Dothraki</td>
+      <td>4</td>
+      <td>57.0</td>
+      <td>15.0</td>
+      <td>5.4</td>
+      <td>16.3</td>
+      <td>17.6</td>
+      <td>36.4</td>
+      <td>Zoe Lloyd</td>
+      <td>David Page</td>
+      <td>06308</td>
+      <td>Dothraki: last run 6 days ago, at MBRG7</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>Falaise</td>
+      <td>2</td>
+      <td>56.0</td>
+      <td>6.5</td>
+      <td>12.4</td>
+      <td>15.7</td>
+      <td>17.4</td>
+      <td>35.8</td>
+      <td>Cian Macredmond</td>
+      <td>Stuart Padman</td>
+      <td>255x9</td>
+      <td>Falaise: last run 13 days ago, at MORP5, stepping down by 200m</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>Badonkidonk</td>
+      <td>12</td>
+      <td>56.0</td>
+      <td>19.2</td>
+      <td>4.2</td>
+      <td>15.0</td>
+      <td>17.0</td>
+      <td>37.6</td>
+      <td>Rochelle Milnes</td>
+      <td>Darryl Dodson</td>
+      <td>1655x</td>
+      <td>Badonkidonk: last run 161 days ago, at MT G5, stepping up by 675m</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>Strazz</td>
+      <td>7</td>
+      <td>54.0</td>
+      <td>63.0</td>
+      <td>1.3</td>
+      <td>15.1</td>
+      <td>17.3</td>
+      <td>28.0</td>
+      <td>Christine Puls</td>
+      <td>Lindsay Cadzow</td>
+      <td>60210</td>
+      <td>Strazz: last run 13 days ago, at MORP6, stepping up by 200m</td>
+    </tr>
+  </tbody>
+</table>
+<div class="footer-note">Comments summarise last run, venue, and trip changes. Win Prob is normalised via price if model preds are missing.</div>
+</div>
+<h3 style="margin-top:22px;">Visuals</h3>
+<div class="plots">
+<div>                        <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script charset="utf-8" src="https://cdn.plot.ly/plotly-3.1.1.min.js" integrity="sha256-HUEFyfiTnZJxCxur99FjbKYTvKSzwDaD3/x5TqHpFu4=" crossorigin="anonymous"></script>                <div id="068a90a0-e66d-4223-ae5a-d3db33361c58" class="plotly-graph-div" style="height:900px; width:1200px;"></div>            <script type="text/javascript">                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("068a90a0-e66d-4223-ae5a-d3db33361c58")) {                    Plotly.newPlot(                        "068a90a0-e66d-4223-ae5a-d3db33361c58",                        [{"marker":{"color":{"dtype":"f8","bdata":"svDT1umhlz+dcvmbrK3EP7bXuj4d0K8\u002fSlzCcOBFtD9uiiOp0GjOP0pcwnDgRbQ\u002ftte6Ph3Qvz8m7qF6O5KrP7bXuj4d0L8\u002fDoLOdz6KpT\u002f\u002f7gdEIEKKPw=="},"colorscale":[[0.0,"#30123b"],[0.07142857142857142,"#4145ab"],[0.14285714285714285,"#4675ed"],[0.21428571428571427,"#39a2fc"],[0.2857142857142857,"#1bcfd4"],[0.35714285714285715,"#24eca6"],[0.42857142857142855,"#61fc6c"],[0.5,"#a4fc3b"],[0.5714285714285714,"#d1e834"],[0.6428571428571429,"#f3c63a"],[0.7142857142857143,"#fe9b2d"],[0.7857142857142857,"#f36315"],[0.8571428571428571,"#d93806"],[0.9285714285714286,"#b11901"],[1.0,"#7a0402"]],"showscale":true,"size":{"dtype":"f8","bdata":"A2X1q5+dJECL4drZric4QEP8gGxLbSxAGtgXWJfWL0AmxCME48E\u002fQBrYF1iX1i9AQ\u002fyAbEttNEAHQec7H8UqQEP8gGxLbTRAzqrMZgBqKEBXxqQmdZAiQA=="}},"mode":"markers+text","text":["1 Hasta La Fiorente","2 Cawdor","3 Crown Mint","4 Fox Gem","5 Jilladora","6 West Cliff","9 Greenidge","11 Dothraki","12 Falaise","13 Badonkidonk","14 Strazz"],"textposition":"top center","x":{"dtype":"i1","bdata":"CgUBDQ4DCAQCDAc="},"y":{"dtype":"f8","bdata":"AAAAAAAAMEBmZmZmZmYvQAAAAAAAAC5AZmZmZmZmLkAzMzMzMzMwQDMzMzMzMzBAmpmZmZkZMUDNzMzMzEwwQGZmZmZmZi9AAAAAAAAALkAzMzMzMzMuQA=="},"type":"scatter","xaxis":"x","yaxis":"y"},{"marker":{"color":{"dtype":"f8","bdata":"svDT1umhlz+dcvmbrK3EP7bXuj4d0K8\u002fSlzCcOBFtD9uiiOp0GjOP0pcwnDgRbQ\u002ftte6Ph3Qvz8m7qF6O5KrP7bXuj4d0L8\u002fDoLOdz6KpT\u002f\u002f7gdEIEKKPw=="},"colorscale":[[0.0,"rgb(0,0,255)"],[1.0,"rgb(255,0,0)"]],"showscale":true,"size":10},"mode":"markers","text":["1 Hasta La Fiorente","2 Cawdor","3 Crown Mint","4 Fox Gem","5 Jilladora","6 West Cliff","9 Greenidge","11 Dothraki","12 Falaise","13 Badonkidonk","14 Strazz"],"textposition":"top center","x":{"dtype":"f8","bdata":"AAAAAAAAMEBmZmZmZmYvQAAAAAAAAC5AZmZmZmZmLkAzMzMzMzMwQDMzMzMzMzBAmpmZmZkZMUDNzMzMzEwwQGZmZmZmZi9AAAAAAAAALkAzMzMzMzMuQA=="},"y":{"dtype":"f8","bdata":"AAAAAAAAMUBmZmZmZuYwQAAAAAAAADJAAAAAAAAAMUDNzMzMzEwxQAAAAAAAgDFAzczMzMzMMECamZmZmZkxQGZmZmZmZjFAAAAAAAAAMUDNzMzMzEwxQA=="},"type":"scatter","xaxis":"x2","yaxis":"y2"},{"marker":{"color":"orange"},"x":["5 Jilladora","2 Cawdor","9 Greenidge","12 Falaise","4 Fox Gem","6 West Cliff","3 Crown Mint","11 Dothraki","13 Badonkidonk","1 Hasta La Fiorente","14 Strazz"],"y":{"dtype":"f8","bdata":"boojqdBozj+dcvmbrK3EP7bXuj4d0L8\u002ftte6Ph3Qvz9KXMJw4EW0P0pcwnDgRbQ\u002ftte6Ph3Qrz8m7qF6O5KrPw6Cznc+iqU\u002fsvDT1umhlz\u002f\u002f7gdEIEKKPw=="},"type":"bar","xaxis":"x3","yaxis":"y3"},{"marker":{"color":{"dtype":"f8","bdata":"svDT1umhlz+dcvmbrK3EP7bXuj4d0K8\u002fSlzCcOBFtD9uiiOp0GjOP0pcwnDgRbQ\u002ftte6Ph3Qvz8m7qF6O5KrP7bXuj4d0L8\u002fDoLOdz6KpT\u002f\u002f7gdEIEKKPw=="},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"showscale":true,"size":10},"mode":"markers","text":["1 Hasta La Fiorente","2 Cawdor","3 Crown Mint","4 Fox Gem","5 Jilladora","6 West Cliff","9 Greenidge","11 Dothraki","12 Falaise","13 Badonkidonk","14 Strazz"],"x":{"dtype":"f8","bdata":"zczMzMzMQ0BmZmZmZmZLQJqZmZmZWUdAZmZmZmbmQkDNzMzMzIxMQM3MzMzMzEJAZmZmZmYmSEAzMzMzMzNCQGZmZmZm5kFAzczMzMzMQkAAAAAAAAA8QA=="},"y":{"dtype":"f8","bdata":"AAAAAACAQUAAAAAAAAAUQAAAAAAAACpAZmZmZmZmJEAzMzMzMzMLQGZmZmZmZiRAAAAAAAAAGkAAAAAAAAAuQAAAAAAAABpAMzMzMzMzM0AAAAAAAIBPQA=="},"type":"scatter","xaxis":"x4","yaxis":"y4"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"xaxis":{"anchor":"y","domain":[0.0,0.45],"title":{"text":"Barrier"}},"yaxis":{"anchor":"x","domain":[0.625,1.0],"title":{"text":"Average Early Speed"}},"xaxis2":{"anchor":"y2","domain":[0.55,1.0],"title":{"text":"Average Early Speed"}},"yaxis2":{"anchor":"x2","domain":[0.625,1.0],"title":{"text":"Average Finishing Speed"}},"xaxis3":{"anchor":"y3","domain":[0.0,0.45],"title":{"text":"Runner"}},"yaxis3":{"anchor":"x3","domain":[0.0,0.375],"title":{"text":"Win Prob"}},"xaxis4":{"anchor":"y4","domain":[0.55,1.0],"title":{"text":"Total Rating 100"}},"yaxis4":{"anchor":"x4","domain":[0.0,0.375],"title":{"text":"Average Price"}},"annotations":[{"font":{"size":16},"showarrow":false,"text":"Speed Map (Early Speed by Barrier)","x":0.225,"xanchor":"center","xref":"paper","y":1.0,"yanchor":"bottom","yref":"paper"},{"font":{"size":16},"showarrow":false,"text":"Finishing Speed vs Early Speed","x":0.775,"xanchor":"center","xref":"paper","y":1.0,"yanchor":"bottom","yref":"paper"},{"font":{"size":16},"showarrow":false,"text":"Win Probabilities","x":0.225,"xanchor":"center","xref":"paper","y":0.375,"yanchor":"bottom","yref":"paper"},{"font":{"size":16},"showarrow":false,"text":"Ratings vs Price","x":0.775,"xanchor":"center","xref":"paper","y":0.375,"yanchor":"bottom","yref":"paper"}],"title":{"text":"Penola R7 - Predictive Dashboard"},"height":900,"width":1200},                        {"responsive": true}                    )                };            </script>        </div>
+</div>
+</div>
+</body></html>
