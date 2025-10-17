@@ -1,0 +1,227 @@
+<html><head><meta charset="utf-8"><title>Ipswich R6</title>
+
+<style>
+  :root { --bg:#0f172a; --panel:#111827; --accent:#06b6d4; --accent2:#f59e0b; --accent3:#ef4444; --text:#e5e7eb; --muted:#9ca3af; }
+  body { background: linear-gradient(135deg, #0f172a 0%, #1f2937 100%); color: var(--text); font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif; margin:0; }
+  .container { max-width:1200px; margin:24px auto; padding:24px; background: rgba(17,24,39,0.9); border-radius:16px; box-shadow:0 10px 30px rgba(0,0,0,0.4); }
+  h1 { margin:0 0 4px 0; font-size:32px; letter-spacing:0.3px; }
+  h3 { margin:16px 0; color: var(--muted); font-weight:600; }
+  .badge { display:inline-block; padding:6px 10px; background: linear-gradient(90deg, var(--accent), var(--accent2)); color:#0b1324; border-radius: 999px; font-weight:700; font-size:12px; margin-left:8px; }
+  .race-header { margin: 8px 0 16px 0; padding: 10px 12px; background: linear-gradient(90deg, rgba(6,182,212,0.18), rgba(245,158,11,0.18)); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; }
+  .summary-card { background: radial-gradient(1200px 400px at 0% 0%, rgba(6,182,212,0.12), transparent 50%), radial-gradient(1200px 400px at 100% 0%, rgba(245,158,11,0.12), transparent 50%), rgba(17,24,39,0.7); border: 1px solid rgba(255,255,255,0.08); border-radius:14px; padding:16px; }
+  table { width:100%; border-collapse: collapse; overflow:hidden; border-radius:12px; }
+  thead { background: linear-gradient(90deg, rgba(6,182,212,0.25), rgba(239,68,68,0.25)); }
+  th, td { padding:10px 12px; text-align:left; }
+  th { font-size:13px; text-transform: uppercase; letter-spacing:0.6px; color:#eaf1ff; }
+  tbody tr { background: rgba(255,255,255,0.03); border-bottom: 1px solid rgba(255,255,255,0.06); }
+  tbody tr:nth-child(even) { background: rgba(255,255,255,0.06); }
+  tbody tr:hover { background: rgba(6,182,212,0.12); }
+  .footer-note { color: var(--muted); margin-top: 10px; font-size: 12px; }
+  .plots { margin-top:18px; padding:16px; background: rgba(17,24,39,0.65); border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; }
+  .grid { display:grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 12px; }
+  .card { background: rgba(17,24,39,0.7); border:1px solid rgba(255,255,255,0.08); border-radius:12px; padding:12px; }
+  a { color:#7dd3fc; text-decoration:none; }
+  a:hover { text-decoration:underline; }
+</style>
+
+</head><body>
+<div class="container">
+<h1>Ipswich R6 <span class="badge">Predictive Dashboard</span></h1>
+<div class="race-header">Distance: 1200m  |  Grade: FM BM58  |  Track: Soft</div>
+<h3>Runner Summary</h3>
+<div class="summary-card">
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>tab_number</th>
+      <th>name</th>
+      <th>barrier</th>
+      <th>weight_carriered</th>
+      <th>average_price</th>
+      <th>win_prob</th>
+      <th>average_early_speed</th>
+      <th>average_finishing_speed</th>
+      <th>total_rating_100</th>
+      <th>jockey</th>
+      <th>trainer</th>
+      <th>form_l5</th>
+      <th>runner_comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Huss On First</td>
+      <td>6</td>
+      <td>59.0</td>
+      <td>10.0</td>
+      <td>8.1</td>
+      <td>17.0</td>
+      <td>17.7</td>
+      <td>36.4</td>
+      <td>Corey Sutherland</td>
+      <td>Philip Minter</td>
+      <td>64360</td>
+      <td>Huss On First: last run 13 days ago, at DOOM2, stepping up by 150m</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Rubydoo</td>
+      <td>2</td>
+      <td>60.0</td>
+      <td>9.5</td>
+      <td>8.5</td>
+      <td>16.4</td>
+      <td>17.7</td>
+      <td>44.7</td>
+      <td>Cejay Graham</td>
+      <td>Mark Renehan</td>
+      <td>89866</td>
+      <td>Rubydoo: last run 14 days ago, at CDRA5, stepping down by 200m</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>Time To Cry</td>
+      <td>5</td>
+      <td>60.0</td>
+      <td>19.2</td>
+      <td>4.2</td>
+      <td>15.9</td>
+      <td>16.7</td>
+      <td>52.2</td>
+      <td>Damien Thornton</td>
+      <td>Billy Healey</td>
+      <td>79x00</td>
+      <td>Time To Cry: last run 16 days ago, at E FM8</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>Alfa Lily</td>
+      <td>8</td>
+      <td>59.5</td>
+      <td>6.5</td>
+      <td>12.4</td>
+      <td>16.5</td>
+      <td>17.3</td>
+      <td>53.8</td>
+      <td>Nozi Tomizawa</td>
+      <td>Michael G Nolan</td>
+      <td>227x1</td>
+      <td>Alfa Lily: last run 15 days ago, at DALB6</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>La Pittrice</td>
+      <td>11</td>
+      <td>59.5</td>
+      <td>21.5</td>
+      <td>3.8</td>
+      <td>15.0</td>
+      <td>17.0</td>
+      <td>28.6</td>
+      <td>Scott Sheargold</td>
+      <td>Olivia Cairns</td>
+      <td>7x4x6</td>
+      <td>La Pittrice: last run 21 days ago, at CDRA5</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>So Be Inspired</td>
+      <td>1</td>
+      <td>59.5</td>
+      <td>3.5</td>
+      <td>23.0</td>
+      <td>17.1</td>
+      <td>17.1</td>
+      <td>66.3</td>
+      <td>Andrew Mallyon</td>
+      <td>Kris Lees</td>
+      <td>24x36</td>
+      <td>So Be Inspired: last run 21 days ago, at LISM6, stepping up by 10m</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>Zimbara</td>
+      <td>14</td>
+      <td>59.5</td>
+      <td>10.2</td>
+      <td>7.9</td>
+      <td>17.2</td>
+      <td>17.1</td>
+      <td>55.2</td>
+      <td>Justin Huxtable</td>
+      <td>Darren Bell</td>
+      <td>21x82</td>
+      <td>Zimbara: last run 15 days ago, at DALB5</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>Brodies Voyage</td>
+      <td>13</td>
+      <td>57.0</td>
+      <td>15.2</td>
+      <td>5.3</td>
+      <td>16.0</td>
+      <td>17.7</td>
+      <td>33.7</td>
+      <td>Cobi Vitler</td>
+      <td>Mark Galloway</td>
+      <td>91x69</td>
+      <td>Brodies Voyage: last run 9 days ago, at DOOM5</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>She's Brutal</td>
+      <td>7</td>
+      <td>58.5</td>
+      <td>6.5</td>
+      <td>12.4</td>
+      <td>15.7</td>
+      <td>16.9</td>
+      <td>54.4</td>
+      <td>Adin Thompson</td>
+      <td>Nick Keal</td>
+      <td>877x1</td>
+      <td>She's Brutal: last run 11 days ago, at TWBA2</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>Human Touch</td>
+      <td>3</td>
+      <td>57.5</td>
+      <td>6.0</td>
+      <td>13.4</td>
+      <td>15.6</td>
+      <td>17.8</td>
+      <td>47.3</td>
+      <td>Jake Bayliss</td>
+      <td>Paul A Nolan</td>
+      <td>59x62</td>
+      <td>Human Touch: last run 36 days ago, at WARW6, stepping down by 100m</td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>Magical Eye</td>
+      <td>10</td>
+      <td>54.0</td>
+      <td>83.0</td>
+      <td>1.0</td>
+      <td>16.9</td>
+      <td>17.5</td>
+      <td>20.9</td>
+      <td>Jason Taylor</td>
+      <td>D &amp; G Lane</td>
+      <td>68030</td>
+      <td>Magical Eye: last run 51 days ago, at DOOM3, stepping up by 150m</td>
+    </tr>
+  </tbody>
+</table>
+<div class="footer-note">Comments summarise last run, venue, and trip changes. Win Prob is normalised via price if model preds are missing.</div>
+</div>
+<h3 style="margin-top:22px;">Visuals</h3>
+<div class="plots">
+<div>                        <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script charset="utf-8" src="https://cdn.plot.ly/plotly-3.1.1.min.js" integrity="sha256-HUEFyfiTnZJxCxur99FjbKYTvKSzwDaD3/x5TqHpFu4=" crossorigin="anonymous"></script>                <div id="73cb9059-0a1b-4286-bac8-0496252ed121" class="plotly-graph-div" style="height:900px; width:1200px;"></div>            <script type="text/javascript">                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("73cb9059-0a1b-4286-bac8-0496252ed121")) {                    Plotly.newPlot(                        "73cb9059-0a1b-4286-bac8-0496252ed121",                        [{"marker":{"color":{"dtype":"f8","bdata":"y\u002f\u002fTiPqltD8LeT0kMLy1P8l\u002fh046gqU\u002fTNhZXEbEvz9vL0h\u002fMDWjP9hICuhlf80\u002fcqWd\u002flQ+tD9O10wtPCurP0zYWVxGxL8\u002f0\u002f8Fcvs0wT8L5HJP6+aDPw=="},"colorscale":[[0.0,"#30123b"],[0.07142857142857142,"#4145ab"],[0.14285714285714285,"#4675ed"],[0.21428571428571427,"#39a2fc"],[0.2857142857142857,"#1bcfd4"],[0.35714285714285715,"#24eca6"],[0.42857142857142855,"#61fc6c"],[0.5,"#a4fc3b"],[0.5714285714285714,"#d1e834"],[0.6428571428571429,"#f3c63a"],[0.7142857142857143,"#fe9b2d"],[0.7857142857142857,"#f36315"],[0.8571428571428571,"#d93806"],[0.9285714285714286,"#b11901"],[1.0,"#7a0402"]],"showscale":true,"size":{"dtype":"f8","bdata":"7M9y3dUQMEBIAyjOgn0wQOrtrMbeZihAfhgTfKtoNECHMrjxxoAnQOkISJ2HCz9AQSnrZrLQL0AaBLKB45wqQH4YE3yraDRA3a8UcWRxNUBFOML6jPEhQA=="}},"mode":"markers+text","text":["1 Huss On First","4 Rubydoo","5 Time To Cry","6 Alfa Lily","7 La Pittrice","9 So Be Inspired","10 Zimbara","11 Brodies Voyage","12 She's Brutal","13 Human Touch","15 Magical Eye"],"textposition":"top center","x":{"dtype":"i1","bdata":"BgIFCAsBDg0HAwo="},"y":{"dtype":"f8","bdata":"AAAAAAAAMUBmZmZmZmYwQM3MzMzMzC9AAAAAAACAMEAAAAAAAAAuQJqZmZmZGTFAMzMzMzMzMUAAAAAAAAAwQGZmZmZmZi9AMzMzMzMzL0BmZmZmZuYwQA=="},"type":"scatter","xaxis":"x","yaxis":"y"},{"marker":{"color":{"dtype":"f8","bdata":"y\u002f\u002fTiPqltD8LeT0kMLy1P8l\u002fh046gqU\u002fTNhZXEbEvz9vL0h\u002fMDWjP9hICuhlf80\u002fcqWd\u002flQ+tD9O10wtPCurP0zYWVxGxL8\u002f0\u002f8Fcvs0wT8L5HJP6+aDPw=="},"colorscale":[[0.0,"rgb(0,0,255)"],[1.0,"rgb(255,0,0)"]],"showscale":true,"size":10},"mode":"markers","text":["1 Huss On First","4 Rubydoo","5 Time To Cry","6 Alfa Lily","7 La Pittrice","9 So Be Inspired","10 Zimbara","11 Brodies Voyage","12 She's Brutal","13 Human Touch","15 Magical Eye"],"textposition":"top center","x":{"dtype":"f8","bdata":"AAAAAAAAMUBmZmZmZmYwQM3MzMzMzC9AAAAAAACAMEAAAAAAAAAuQJqZmZmZGTFAMzMzMzMzMUAAAAAAAAAwQGZmZmZmZi9AMzMzMzMzL0BmZmZmZuYwQA=="},"y":{"dtype":"f8","bdata":"MzMzMzOzMUAzMzMzM7MxQDMzMzMzszBAzczMzMxMMUAAAAAAAAAxQJqZmZmZGTFAmpmZmZkZMUAzMzMzM7MxQGZmZmZm5jBAzczMzMzMMUAAAAAAAIAxQA=="},"type":"scatter","xaxis":"x2","yaxis":"y2"},{"marker":{"color":"orange"},"x":["9 So Be Inspired","13 Human Touch","6 Alfa Lily","12 She's Brutal","4 Rubydoo","1 Huss On First","10 Zimbara","11 Brodies Voyage","5 Time To Cry","7 La Pittrice","15 Magical Eye"],"y":{"dtype":"f8","bdata":"2EgK6GV\u002fzT\u002fT\u002fwVy+zTBP0zYWVxGxL8\u002fTNhZXEbEvz8LeT0kMLy1P8v\u002f04j6pbQ\u002fcqWd\u002flQ+tD9O10wtPCurP8l\u002fh046gqU\u002fby9IfzA1oz8L5HJP6+aDPw=="},"type":"bar","xaxis":"x3","yaxis":"y3"},{"marker":{"color":{"dtype":"f8","bdata":"y\u002f\u002fTiPqltD8LeT0kMLy1P8l\u002fh046gqU\u002fTNhZXEbEvz9vL0h\u002fMDWjP9hICuhlf80\u002fcqWd\u002flQ+tD9O10wtPCurP0zYWVxGxL8\u002f0\u002f8Fcvs0wT8L5HJP6+aDPw=="},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"showscale":true,"size":10},"mode":"markers","text":["1 Huss On First","4 Rubydoo","5 Time To Cry","6 Alfa Lily","7 La Pittrice","9 So Be Inspired","10 Zimbara","11 Brodies Voyage","12 She's Brutal","13 Human Touch","15 Magical Eye"],"x":{"dtype":"f8","bdata":"MzMzMzMzQkCamZmZmVlGQJqZmZmZGUpAZmZmZmbmSkCamZmZmZk8QDMzMzMzk1BAmpmZmZmZS0CamZmZmdlAQDMzMzMzM0tAZmZmZmamR0BmZmZmZuY0QA=="},"y":{"dtype":"f8","bdata":"AAAAAAAAJEAAAAAAAAAjQDMzMzMzMzNAAAAAAAAAGkAAAAAAAIA1QAAAAAAAAAxAZmZmZmZmJEBmZmZmZmYuQAAAAAAAABpAAAAAAAAAGEAAAAAAAMBUQA=="},"type":"scatter","xaxis":"x4","yaxis":"y4"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"xaxis":{"anchor":"y","domain":[0.0,0.45],"title":{"text":"Barrier"}},"yaxis":{"anchor":"x","domain":[0.625,1.0],"title":{"text":"Average Early Speed"}},"xaxis2":{"anchor":"y2","domain":[0.55,1.0],"title":{"text":"Average Early Speed"}},"yaxis2":{"anchor":"x2","domain":[0.625,1.0],"title":{"text":"Average Finishing Speed"}},"xaxis3":{"anchor":"y3","domain":[0.0,0.45],"title":{"text":"Runner"}},"yaxis3":{"anchor":"x3","domain":[0.0,0.375],"title":{"text":"Win Prob"}},"xaxis4":{"anchor":"y4","domain":[0.55,1.0],"title":{"text":"Total Rating 100"}},"yaxis4":{"anchor":"x4","domain":[0.0,0.375],"title":{"text":"Average Price"}},"annotations":[{"font":{"size":16},"showarrow":false,"text":"Speed Map (Early Speed by Barrier)","x":0.225,"xanchor":"center","xref":"paper","y":1.0,"yanchor":"bottom","yref":"paper"},{"font":{"size":16},"showarrow":false,"text":"Finishing Speed vs Early Speed","x":0.775,"xanchor":"center","xref":"paper","y":1.0,"yanchor":"bottom","yref":"paper"},{"font":{"size":16},"showarrow":false,"text":"Win Probabilities","x":0.225,"xanchor":"center","xref":"paper","y":0.375,"yanchor":"bottom","yref":"paper"},{"font":{"size":16},"showarrow":false,"text":"Ratings vs Price","x":0.775,"xanchor":"center","xref":"paper","y":0.375,"yanchor":"bottom","yref":"paper"}],"title":{"text":"Ipswich R6 - Predictive Dashboard"},"height":900,"width":1200},                        {"responsive": true}                    )                };            </script>        </div>
+</div>
+</div>
+</body></html>
